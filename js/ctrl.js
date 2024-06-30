@@ -47,13 +47,8 @@ function switchToSignin(){
 // * SignIn
     showFlex("signin-container")
 
-// * SignUp
-    hide("signup-container")
-
 // * Content
     hide("content-container")
-    hide("entries-content-container")
-    hide("new-entry-container")
     
 }
 function switchToShowEntries(){
@@ -64,13 +59,8 @@ function switchToShowEntries(){
 // * SignIn
     hide("signin-container")
 
-// * SignUp
-    hide("signup-container")
-
 // * Content
     showFlex("content-container")
-    showFlex("entries-content-container")
-    hide("new-entry-container")
         
 }
 function switchToAddEntry(){
@@ -81,14 +71,9 @@ function switchToAddEntry(){
 // * SignIn
     hide("signin-container")
 
-// * SignUp
-    hide("signup-container")
-
 // * Content
-    resetAddEntryInputs()
     showFlex("content-container")
-    hide("entries-content-container")
-    showFlex("new-entry-container")
+
 }
 
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))

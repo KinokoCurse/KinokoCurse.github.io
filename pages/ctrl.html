@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control panel</title>
+    <link type="image/png" sizes="120x120" rel="icon" href="../imgs/icon-color-01.png">
+    <link rel="stylesheet" href="../css/ctrl.css">
 </head>
 <body>
     <div id="loading">
@@ -11,9 +13,7 @@
     </div>
 
     <div id="login-container" style="display:none;">
-        <div id="login-back-button">
-            <a href="https://nixie.digital">nixie.digital</a>
-        </div>
+
         <div id="signin-container" class="login-element-container" style="display:none;">
             <div class="login-element">
                 <input type="email" id="signin-email-input" minlength="2" maxlength="999" placeholder="Email" required >
@@ -24,21 +24,58 @@
             <div class="login-element">
                 <button id="signin-button">> Log in!</button>
             </div>
-            <div class="login-element">
-                <button id="signup-redirect-button">New user? ></button>
-            </div>
             <div id="signin-error" class="login-element signin-error" style="display: none;">
                 <!-- ? text comes from js --> 
             </div>
         </div>
     </div>
     
-    <div id="content-contaiener">
-        <div id="back-buttons">
-            <div id="logout-button">
-                logout
+    <div id="content-container">
+        <div id="new-entry-container">
+            <div id="name-input-container">
+                <textarea id="name-input" placeholder="Name"></textarea>
+            </div>
+            <div id="start-time-input-container">
+                <div id="start-time-title">
+                    Concert time
+                </div>
+                <input type="datetime-local" id="start-time-input" step="1">
+            </div>
+            <div id="desc-input-container">
+                <textarea name="" id="desc-input" placeholder="Description..."></textarea>
+            </div>
+            <div id="price-input-container">
+                <input type="number" id="price-input" placeholder="Price">
+            </div>
+            <div id="venuename-input-container">
+                <textarea id="venuename-input" placeholder="Venue name"></textarea>
+            </div>
+            <div id="address-input-container">
+                <textarea id="address-input" placeholder="Address"></textarea>
+            </div>
+
+
+            <div id="pictureurl-input-container">
+                <textarea id="pictureurl-input" placeholder="Picture URL"></textarea>
+            </div>
+            <div id="eventlink-input-container">
+                <textarea id="eventlink-input" placeholder="Event link"></textarea>
+            </div>
+            <div id="back-buttons">
+                <div id="logout-button">
+                    logout
+                </div>
             </div>
         </div>
+        <div id="feed-container">
+            <div id="event-feed">
+                blabla
+            </div>
+            
+        </div>
+
+
+
     </div>
 
 
