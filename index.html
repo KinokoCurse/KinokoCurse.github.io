@@ -17,6 +17,21 @@
                 <div id="title-curse">
                     CURSE
                 </div>
+                <div id="dropdown-container">
+                    <svg onclick="toggleDropdownShow()" id="burger-svg" 
+                            xmlns="http://www.w3.org/2000/svg" width="100%" 
+                            height="7vmax" viewBox="0 0 48 48" class="svg-cyan">
+                        <path id="burger-svg-path" 
+                            d="M6 36.2v-3.3h36.05v3.3Zm0-10.55v-3.3h36.05v3.3ZM6 
+                            15.1v-3.3h36.05v3.3Z"/>
+                    </svg>
+                    <div class="dropdown">
+                        <div class="dropdown-item" >ABOUT US</div>
+                        <div class="dropdown-item" >GIGS</div>
+                        <div class="dropdown-item" >NEWS</div>
+                        <div class="dropdown-item" >STORE</div>
+                    </div>
+                </div>
             </div>
             <div id="navbar">
 
@@ -24,16 +39,41 @@
 
         </div>
         <div id="main">
+            <div id="listen-to">
+                <div id="listen-to-content">
+                    <img src="imgs/dry.webp" alt="dry.webp">
+                </div>
+                <div id="listen-to-title">
+                    <a href="https://open.spotify.com/track/3jGFcZRSbcd0VDEEgbU7ho?si=6bd0e7ec98994791&nd=1&dlsi=0e104fac1e69456a">
+                        LISTEN TO DRY!
+                    </a> 
+                </div>
+            </div>
+            <div id="reviews-scroll-container">
+                <div id="reviews">
+                    <div class="review" id="review-1">
+                        <div class="review-text">
+                            "Exceptional vocals, outshining the other acts. Their performance was impressively tight, offering a diverse range of tracks that kept the audience engaged. The third song was a standout, showcasing their talent and ability to captivate the crowd. A memorable performance overall."
+                        </div>
+                        <div class="review-author">
+                            - Underground Sound
+                        </div>
+                    </div>
+                    <div class="review" id="review-2">
+                        <div class="review-text">
+                            "Super tight band, who always put on a stellar performance! Their audience interaction gets better with every show, love watching these guys grow!"
+                        </div>
+                        <div class="review-author">
+                            - Inpop
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            
 
-        </div>
-        <div id="footers">
-
-        </div>
-
-        <div id="index-temp-title">
-            KINOKO_CURSE<br>
-            IN PROGRESS
         </div>
     </div>
+
+<script src="js/utils.js"></script>
 </body>
 </html>
