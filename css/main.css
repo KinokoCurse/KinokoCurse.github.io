@@ -129,6 +129,8 @@ body{
             align-items: center;
             z-index: 1;
             overflow-x: hidden;
+            overflow-y: scroll;
+            
         }
             #listen-to{
                 width: 90%;
@@ -168,11 +170,15 @@ body{
 
             #reviews-scroll-container{
                 width:100vw;
-                overflow-y: scroll;
+                overflow-y: hidden;
                 margin-top:7%;
+                flex-shrink: 0;
+                box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
             }
                 #reviews{
                     width:200vw;
+                    height:100%;
+                    max-height: 100%;
                     color:wheat;
                     letter-spacing: 0em;
                     font-weight: normal;
@@ -181,32 +187,41 @@ body{
                     flex-direction: row;
                     align-items: stretch;
                     justify-content: start;
+
                 }
                     .review{
                         width:100vw;
                         display: flex;
                         flex-direction: column;
-                            
+                        height:100%;
+                        max-height:100%;
+                        padding:3% 2% 3% 2%;
+                        
                     }   
                     #review-1{
-                        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url("../imgs/live-color-landscape-01.jpg");
-                        background-position: center top;
-                        background-size: 100vw;
+                        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+                        url("../imgs/lineup-color-landscape-01.jpg");
+                        background-position: center center;
+                        background-size: cover;
                     }
                     #review-2{
-                        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url("../imgs/live-color-landscape-03.jpg");
-                        background-position: center top;
-                        background-size: 100vw;
+                        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+                        url("../imgs/lineup-color-landscape-03.jpg");
+                        background-position: center center;
+                        background-size: cover;
                     }
                         .review-text{
                             width: 100%;
+                            
+                            border-bottom:5px  solid wheat;
+                            border-top:5px  solid wheat;
                             padding:3%;
                             text-align: center;
                             font-size: clamp(1.3rem, 1.5rem, 1.7rem);
                             font-size: 1.4rem;
                             font-family: Arial, Helvetica, sans-serif;
+                            opacity: 95%;
+                            text-shadow: #242424 1px 1px 5px;
                         }
                         .review-author{
                             margin-top:2%;
@@ -215,7 +230,28 @@ body{
                             font-size: 1.7rem;
                             padding:5%;
                             margin-top:auto;
+                            opacity: 95%;
+                            text-shadow: #242424 1px 1px 5px;
                         }
+            #mushrooms{
+                width:100%;
+                
+                display:flex;
+                flex-direction: row;
+                flex-shrink: 0;
+
+            }
+                .mushroom-container-container{
+
+                }
+                    .mushroom-container{
+                        
+                    }
+                        .mushroom-svg{
+                            width:50%;
+                            height: 50%;
+                        }
+
 
 
 
