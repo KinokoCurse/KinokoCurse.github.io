@@ -32,7 +32,7 @@ body{
     #ffebcb
     #91b262
 }
-@media only screen and (max-width: 62rem){ 
+@media only screen and (max-width: 37rem){ 
     /* ? Base styling */
     /* ? Mobile specific styling */
     #index-content{
@@ -55,7 +55,7 @@ body{
         #header{
             height:10%;
             width:100%;
-            
+            box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
         }
             #title{
                 height:100%;
@@ -86,42 +86,46 @@ body{
                     font-family: playfair display, serif;
                     float:left;
                 }
-            #dropdown-container{
-                float:right;
-                position: relative;
-                width:15%;
-                height:7vmax;
-                margin-left: auto;
-                margin-right:2%;
-                cursor:pointer;
-                flex-grow: 0;
-                filter: brightness(0) saturate(100%) invert(98%) sepia(24%) saturate(1169%) hue-rotate(297deg) brightness(92%) contrast(88%);
-                z-index: 999;
-            }
-                .dropdown{
-                    display:none;   
-                    z-index: 1;
-                    position: absolute;
-                    top:7vmax;
-                    width:100vw;
-                    right:0;
-                    padding-right:0%;
-                    text-align: end;
-                    
+                #dropdown-container{
+                    float:right;
+                    position: relative;
+                    width:15%;
+                    height:7vmax;
+                    margin-left: auto;
+                    margin-right:2%;
+                    cursor:pointer;
+                    flex-grow: 0;
+                    filter: brightness(0) saturate(100%) invert(98%) sepia(24%) saturate(1169%) hue-rotate(297deg) brightness(92%) contrast(88%);
+                    z-index: 999;
                 }
-                .display-dropdown{
-                    display: block;
-                    
-                }
-                    .dropdown-item{
-                        font-size: clamp(1rem, 4vmax, 4rem);
-                        padding-top:1vmax;
-                        padding-right:2%;
-                        
+                    .dropdown{
+                        display:none;   
+                        z-index: 1;
+                        position: absolute;
+                        top:7vmax;
+                        width:100vw;
+                        right:0;
+                        padding-right:0%;
+                        text-align: end;
                         
                     }
+                    .display-dropdown{
+                        display: block;
+                        
+                    }
+                        .dropdown-item{
+                            font-size: clamp(1rem, 4vmax, 4rem);
+                            padding-top:1vmax;
+                            padding-right:2%;
+                            
+                            
+                        }
+            #navnbar{
+                display:none;
+            }
 
         #main{
+            padding-top:5%;
             height:90%;
             width:100%;   
             display: flex;
@@ -133,7 +137,7 @@ body{
             
         }
             #listen-to{
-                width: 90%;
+                width: 80%;
                 display: flex;
                 flex-direction: column;
             }
@@ -143,6 +147,7 @@ body{
                     align-items: center;
                     justify-content: center;
                     margin-bottom:4%;
+                    box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
                 }
                     #listen-to-content > img{
                         width:100%;
@@ -152,7 +157,7 @@ body{
                 #listen-to-title{
                     width:100%;
                     color:wheat;
-                    font-size: 10.9vw;
+                    font-size: 9vw;
                     letter-spacing: 0em;
                     font-weight: normal;
                     font-family: playfair display, serif;
@@ -171,7 +176,7 @@ body{
             #reviews-scroll-container{
                 width:100vw;
                 overflow-y: hidden;
-                margin-top:7%;
+                margin-top:10%;
                 flex-shrink: 0;
                 box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
             }
@@ -195,7 +200,7 @@ body{
                         flex-direction: column;
                         height:100%;
                         max-height:100%;
-                        padding:3% 2% 3% 2%;
+                        padding:3% 2% 2% 2%;
                         
                     }   
                     #review-1{
@@ -218,7 +223,7 @@ body{
                             padding:3%;
                             text-align: center;
                             font-size: clamp(1.3rem, 1.5rem, 1.7rem);
-                            font-size: 1.4rem;
+                            font-size: 4vw;
                             font-family: Arial, Helvetica, sans-serif;
                             opacity: 95%;
                             text-shadow: #242424 1px 1px 5px;
@@ -227,8 +232,8 @@ body{
                             margin-top:2%;
                             font-family: Arial, Helvetica, sans-serif;
                             font-weight: bolder;
-                            font-size: 1.7rem;
-                            padding:5%;
+                            font-size: 6vw;
+                            padding-top:4%;
                             margin-top:auto;
                             opacity: 95%;
                             text-shadow: #242424 1px 1px 5px;
@@ -257,7 +262,11 @@ body{
 
 
 }
-@media screen and (min-width: 62rem){
+@media screen and (min-width: 37rem){
     /* ? Desktop specific styling */
+
+}
+
+@media only screen and (min-width: 62rem){
 
 }
