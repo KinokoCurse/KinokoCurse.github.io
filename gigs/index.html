@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinoko Curse</title>
+    <link type="image/png" sizes="120x120" rel="icon" href="../imgs/icon-color-01.png">
+    <style>
+/* ? Universal styling*/
+
+*{
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+html{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+    height:100%;
+    width:100%;
+    margin: 0; 
+    padding: 0;
+}
+html:focus{
+    outline: none !important;
+}
+body{
+    height:100%;
+    width:100%;
+
+}
+.palette{
+    color:
+    #604c5c
+    #b0ccbc
+    #ffebcb
+    #91b262
+}
+
+
+
+@media only screen and (max-width: 37rem){ 
+    /* ? Base styling */
+    /* ? Mobile specific styling */
+    #index-content{
+        width:100%;
+        height:100%;
+        /* background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url('../imgs/live-b&w-landscape.jpg');
+        background-position: center center;
+        background-size: 100%; */
+
+        background-color: #604c5c;
+
+        
+
+        overflow-y: scroll;
+    }
+    *{
+        border:0px solid red;
+    }
+        #header{
+            height:10%;
+            width:100%;
+            box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
+        }
+        #title{
+                height:100%;
+                display: flex;
+                align-items: center;
+                padding-left:4%;
+                
+            }
+            #title > a{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            
+                #title-kinoko{
+                    color:wheat;
+                    text-align: start;
+                    
+                    font-size: 2.5rem;
+                    letter-spacing: 0em;
+                    font-style: italic;
+                    font-weight: normal;
+                    font-family: playfair display, serif;
+                    float:left;
+                }
+                #title-curse{
+                    color:wheat;
+                    text-align: start;
+                    
+                    font-size: 2.5rem;
+                    letter-spacing: 0em;
+                    margin-left:3%;
+                    font-weight: normal;
+                    font-family: playfair display, serif;
+                    float:left;
+                }
+                #dropdown-container{
+                    float:right;
+                    position: relative;
+                    width:15%;
+                    height:7vh;
+                    margin-left: auto;
+                    margin-right:2%;
+                    cursor:pointer;
+                    flex-grow: 0;
+                    filter: brightness(0) saturate(100%) invert(92%) sepia(4%) saturate(3674%) hue-rotate(326deg) brightness(104%) contrast(97%);
+                    z-index: 999;
+                }
+                    .dropdown{
+                        display:none;   
+                        z-index: 1;
+                        position: absolute;
+                        top:10vh;
+                        width:100vw;
+                        right:0;
+                        padding-right:0%;
+                        text-align: end;
+                        
+                    }
+                    .display-dropdown{
+                        display: block;
+                        
+                    }
+                        .dropdown-item{
+                            font-size:7.5vw;
+                            padding-top:1vmax;
+                            padding-right:2%;
+                            font-weight: bold;
+                            border-bottom: 0px solid wheat;
+                            font-family: playfair display, serif;
+                            letter-spacing: 0em;
+                            font-style: italic;
+                            font-weight: 700;
+                            text-shadow: #000000da 1px -1px 10px;   
+                        }
+            #navbar{
+                display:none;
+            }
+
+
+        #main-scroll-container{
+            height:90%;
+            width:100%;   
+        }
+        #main{
+            height:100%;
+            width:100%;   
+
+    
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/live-b&w-landscape.jpg");
+            background-position: center top;
+            background-size: cover;
+
+            display:flex;
+            padding-top:5%;
+            align-items: center;
+            justify-content: center;
+        }
+        #construction{
+                color:rgba(245, 222, 179, 0.808);
+                font-size:4rem;
+                font-family: playfair display, serif;
+                text-align: center;
+            }
+}
+@media only screen and (max-width: 62rem) and (min-width: 37rem){
+       /* ? Base styling */
+    /* ? Mobile specific styling */
+    #index-content{
+        width:100%;
+        height:100%;
+        /* background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url('../imgs/live-b&w-landscape.jpg');
+        background-position: center center;
+        background-size: 100%; */
+
+        background-color: #604c5c;
+
+        
+
+        overflow-y: scroll;
+    }
+    *{
+        border:0px solid red;
+    }
+        #header{
+            height:15%;
+            width:100%;
+            box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
+        }
+            #title{
+                height:100%;
+                display: flex;
+                align-items: center;
+                padding-left:4%;
+                
+            }
+            #title > a{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+                #title-kinoko{
+                    color:wheat;
+                    text-align: start;
+                    
+                    font-size: 4.5rem;
+                    letter-spacing: 0em;
+                    font-style: italic;
+                    font-weight: normal;
+                    font-family: playfair display, serif;
+                    float:left;
+                }
+                #title-curse{
+                    color:wheat;
+                    text-align: start;
+                    
+                    font-size: 4.5rem;
+                    letter-spacing: 0em;
+                    margin-left:3%;
+                    font-weight: normal;
+                    font-family: playfair display, serif;
+                    float:left;
+                }
+                #dropdown-container{
+                    float:right;
+                    position: relative;
+                    width:15%;
+                    height:9vh;
+                    margin-left: auto;
+                    margin-right:2%;
+                    cursor:pointer;
+                    flex-grow: 0;
+                    filter: brightness(0) saturate(100%) invert(92%) sepia(4%) saturate(3674%) hue-rotate(326deg) brightness(104%) contrast(97%);
+                    z-index: 999;
+                }
+                    #burger-svg{
+                        height:9vh
+                    }
+                    .dropdown{
+                        display:none;   
+                        z-index: 1;
+                        position: absolute;
+                        top:15vh;
+                        width:100vw;
+                        right:0;
+                        padding-right:0%;
+                        text-align: end;
+                        
+                    }
+                    .display-dropdown{
+                        display: block;
+                        
+                    }
+                        .dropdown-item{
+                            font-size:7.5vw;
+                            padding-top:1vmax;
+                            padding-right:2%;
+                            font-weight: bold;
+                            border-bottom: 0px solid wheat;
+                            font-family: playfair display, serif;
+                            letter-spacing: 0em;
+                            font-style: italic;
+                            font-weight: 700;
+                            text-shadow: #000000da 1px -1px 10px;   
+                        }
+            #navbar{
+                display:none;
+            }
+        #main-scroll-container{
+            height:85%;
+            width:100%;   
+        }
+        #main{
+            height:100%;
+            width:100%;   
+
+    
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/live-b&w-landscape.jpg");
+            background-position: center top;
+            background-size: cover;
+
+            display:flex;
+            padding-top:5%;
+            align-items: center;
+            justify-content: center;
+        }
+        #construction{
+                color:rgba(245, 222, 179, 0.808);
+                font-size:4rem;
+                font-family: playfair display, serif;
+                text-align: center;
+            }
+
+}
+@media only screen and (min-width: 62rem){
+/* ? Desktop specific styling */
+
+       /* ? Base styling */
+    /* ? Mobile specific styling */
+    #index-content{
+        width:100%;
+        height:100%;
+        /* background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url('../imgs/live-b&w-landscape.jpg');
+        background-position: center center;
+        background-size: 100%; */
+
+        
+
+        
+    }
+    *{
+        border:0px solid red;
+    }
+        #header{
+            height:10%;
+            width:100%;
+            /* box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
+         */
+            display:flex;
+            flex-direction: row;
+            background-color: #604c5c;
+        }
+            #title{
+                height:100%;
+
+                padding-left:4%;
+
+            }
+            #title > a{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+                #title-kinoko{
+                    color:wheat;
+                    text-align: start;
+                    
+                    font-size: 3vw;
+                    letter-spacing: 0em;
+                    font-style: italic;
+                    font-weight: normal;
+                    font-family: playfair display, serif;
+                    float:left;
+                }
+                #title-curse{
+                    color:wheat;
+                    text-align: start;
+                    
+                    font-size: 3vw;
+                    letter-spacing: 0em;
+                    margin-left:3%;
+                    font-weight: normal;
+                    font-family: playfair display, serif;
+                    float:left;
+                }
+                #dropdown-container{
+                    display:none;
+                }
+
+            #navbar{
+                
+                display:flex;
+                flex-direction: row;    
+                
+                flex:1;
+                justify-content: space-evenly;
+                
+            }
+                .navbar-item{
+                    font-size: 2vw;
+                    color:wheat;
+                    font-family: playfair display, serif;
+                    
+                    text-decoration: none;
+                    flex-shrink: 0;
+                    align-self: center;
+                    
+                }
+                .navbar-item > a {
+                    text-decoration: none;
+                    color:wheat;
+                }
+
+
+        #main-scroll-container{
+            height:90%;
+            width:100%;
+        }
+
+    
+        #main{
+            height:100%;
+            width:100%;   
+
+    
+            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/live-b&w-landscape.jpg");
+            background-position: center top;
+            background-size: cover;
+
+            display:flex;
+            padding-top:5%;
+            align-items: start;
+            justify-content: center;
+        }
+            #construction{
+                color:rgba(245, 222, 179, 0.808);
+                font-size:4rem;
+                font-family: playfair display, serif;
+            }
+        
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="index-content" class="content">
+        <div id="header">
+            <div id="title">
+                <a href="https://kinokocurse.com">
+                    <div id="title-kinoko">
+                        KINOKO
+                    </div>
+                    <div id="title-curse">
+                        CURSE
+                    </div>
+                </a>
+                <div id="dropdown-container">
+                    <svg onclick="toggleDropdownShow()" id="burger-svg" 
+                            xmlns="http://www.w3.org/2000/svg" width="100%" 
+                            height="7vmax" viewBox="0 0 48 48" class="svg-cyan">
+                        <path id="burger-svg-path" 
+                            d="M6 36.2v-3.3h36.05v3.3Zm0-10.55v-3.3h36.05v3.3ZM6 
+                            15.1v-3.3h36.05v3.3Z"/>
+                    </svg>
+                    <div class="dropdown">
+                        <div class="dropdown-item" ><a href="../about" style="text-decoration: none;">ABOUT US</a></div>
+                        <div class="dropdown-item" ><a href="../gigs" style="text-decoration: underline;">GIGS</a></div>
+                        <div class="dropdown-item" ><a href="../news" style="text-decoration: none;">NEWS</a></div>
+                        <div class="dropdown-item" ><a href="../store" style="text-decoration: none;">STORE</a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="navbar">
+                <div class="navbar-item"><a href="../about">ABOUT US</a></div>
+                <div class="navbar-item"><a href="../gigs" style="text-decoration: underline;">GIGS</a></div>
+                <div class="navbar-item"><a href="../news">NEWS</a></div>
+                <div class="navbar-item"><a href="../store">STORE</a></div>
+            </div>
+
+        </div>
+        <div id="main-scroll-container">
+            <div id="main">
+                <div id="construction">
+                    This site is still under construction <3
+                </div>
+            </div>
+        </div>
+</body>
+<script>
+    function toggleDropdownShow(){
+    if(document.querySelector(".dropdown").classList.contains("display-dropdown")){
+        document.querySelector("#main").style.filter = "brightness(100%)"
+        document.querySelector(".dropdown").classList.toggle("display-dropdown")
+    }
+    else{
+        document.querySelector("#main").style.filter = "brightness(50%)"        
+        document.querySelector(".dropdown").classList.toggle("display-dropdown")         
+    }
+}
+</script>
+</html>
