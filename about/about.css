@@ -396,27 +396,39 @@ body{
 
     
             display:flex;
-            padding-top:5%;
-            align-items: start;
-            justify-content: center;
+            
+            flex-direction: row;
+
+            align-items: center;
+            justify-content: start;
+            padding-left:5%;
+
             position: relative;
 
             
-
+            
         }
-            #construction{
-                color:rgba(245, 222, 179, 0.808);
-                font-size:4rem;
-                font-family: playfair display, serif;
+
+            #picture-1{
+
+                height:80%;
+                max-width: 35%;
+                max-height:80%;
             }
+                #picture-1 > img{
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+
 
             #text{
-                top:5vh;
-                position: absolute;
-                right:16%;
+
                 height:80%;
                 border:0px solid red;
                 width:30%;
+                flex-grow: 1;
+                margin-right: 20%;
+                margin-left:5%;
             }
 
                 #text-title{
@@ -429,30 +441,19 @@ body{
                     color:wheat;
                     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                     font-size: 2.0vmin;
-                    line-height: 1.1;
+                    line-height: 1.2;
                     letter-spacing: 0.05em;
                     margin-top:1vh;
                 }
 
 
-            #picture-1{
-                position: absolute;
-                top:5vh;
-                left:4%;
-                height:80%;
-                max-width: 35%;
-                max-height:80%;
-            }
-                #picture-1 > img{
-                    max-width: 100%;
-                    max-height: 100%;
-                }
+
             
             #sidebar{
                 display:flex;
                 position: absolute;
                 top:5vh;
-                right:3%;
+                right:4%;
                 border:0px solid red; 
                 width:8%;
 
@@ -470,7 +471,7 @@ body{
                 .sidebar-item > img{
                     
                     width:100%;
-                    filter: brightness(0) saturate(100%) invert(76%) sepia(53%) saturate(3558%) hue-rotate(356deg) brightness(103%) contrast(91%)
+                    filter: brightness(0) saturate(100%) invert(87%) sepia(16%) saturate(768%) hue-rotate(333deg) brightness(105%) contrast(95%)
                     drop-shadow(12px 12px 12px #38133877);
                 } 
                 .sidebar-item:nth-child(even){
