@@ -32,6 +32,7 @@ body{
     #b0ccbc
     #ffebcb
     #91b262
+    #F3A712
 }
 @media only screen and (max-width: 37rem){ 
     /* ? Base styling */
@@ -898,7 +899,7 @@ body{
             #sidebar{
                 display:flex;
                 position: absolute;
-                top:3%;
+                top:5vh;
                 right:3%;
                 border:0px solid red; 
                 width:8%;

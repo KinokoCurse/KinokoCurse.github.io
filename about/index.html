@@ -5,426 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinoko Curse</title>
     <link type="image/png" sizes="120x120" rel="icon" href="../imgs/icon-color-01.png">
-    <style>
-/* ? Universal styling*/
-
-*{
-    box-sizing: border-box;
-    margin: 0; 
-    padding: 0;
-}
-html{
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;    
-    height:100%;
-    width:100%;
-    margin: 0; 
-    padding: 0;
-}
-html:focus{
-    outline: none !important;
-}
-body{
-    height:100%;
-    width:100%;
-
-}
-.palette{
-    color:
-    #604c5c
-    #b0ccbc
-    #ffebcb
-    #91b262
-}
-
-
-
-@media only screen and (max-width: 37rem){ 
-    /* ? Base styling */
-    /* ? Mobile specific styling */
-    #index-content{
-        width:100%;
-        height:100%;
-        /* background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-        url('../imgs/live-b&w-landscape.jpg');
-        background-position: center center;
-        background-size: 100%; */
-
-        background-color: #604c5c;
-
-        
-
-        overflow-y: scroll;
-    }
-    *{
-        border:0px solid red;
-    }
-        #header{
-            height:10%;
-            width:100%;
-            box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
-        }
-        #title{
-                height:100%;
-                display: flex;
-                align-items: center;
-                padding-left:4%;
-                
-            }
-            #title > a{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-            }
-            
-                #title-kinoko{
-                    color:wheat;
-                    text-align: start;
-                    
-                    font-size: 2.5rem;
-                    letter-spacing: 0em;
-                    font-style: italic;
-                    font-weight: normal;
-                    font-family: playfair display, serif;
-                    float:left;
-                }
-                #title-curse{
-                    color:wheat;
-                    text-align: start;
-                    
-                    font-size: 2.5rem;
-                    letter-spacing: 0em;
-                    margin-left:3%;
-                    font-weight: normal;
-                    font-family: playfair display, serif;
-                    float:left;
-                }
-                #dropdown-container{
-                    float:right;
-                    position: relative;
-                    width:15%;
-                    height:7vh;
-                    margin-left: auto;
-                    margin-right:2%;
-                    cursor:pointer;
-                    flex-grow: 0;
-                    filter: brightness(0) saturate(100%) invert(92%) sepia(4%) saturate(3674%) hue-rotate(326deg) brightness(104%) contrast(97%);
-                    z-index: 999;
-                }
-                    .dropdown{
-                        display:none;   
-                        z-index: 1;
-                        position: absolute;
-                        top:10vh;
-                        width:100vw;
-                        right:0;
-                        padding-right:0%;
-                        text-align: end;
-                        
-                    }
-                    .display-dropdown{
-                        display: block;
-                        
-                    }
-                        .dropdown-item{
-                            font-size:7.5vw;
-                            padding-top:1vmax;
-                            padding-right:2%;
-                            font-weight: bold;
-                            border-bottom: 0px solid wheat;
-                            font-family: playfair display, serif;
-                            letter-spacing: 0em;
-                            font-style: italic;
-                            font-weight: 700;
-                            text-shadow: #000000da 1px -1px 10px;   
-                        }
-            #navbar{
-                display:none;
-            }
-
-
-        #main-scroll-container{
-            height:90%;
-            width:100%;   
-        }
-        #main{
-            height:100%;
-            width:100%;   
-
-    
-            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/live-b&w-landscape.jpg");
-            background-position: center top;
-            background-size: cover;
-
-            display:flex;
-            padding-top:5%;
-            align-items: center;
-            justify-content: center;
-        }
-        #construction{
-                color:rgba(245, 222, 179, 0.808);
-                font-size:4rem;
-                font-family: playfair display, serif;
-                text-align: center;
-            }
-}
-@media only screen and (max-width: 62rem) and (min-width: 37rem){
-       /* ? Base styling */
-    /* ? Mobile specific styling */
-    #index-content{
-        width:100%;
-        height:100%;
-        /* background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-        url('../imgs/live-b&w-landscape.jpg');
-        background-position: center center;
-        background-size: 100%; */
-
-        background-color: #604c5c;
-
-        
-
-        overflow-y: scroll;
-    }
-    *{
-        border:0px solid red;
-    }
-        #header{
-            height:15%;
-            width:100%;
-            box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
-        }
-            #title{
-                height:100%;
-                display: flex;
-                align-items: center;
-                padding-left:4%;
-                
-            }
-            #title > a{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-            }
-                #title-kinoko{
-                    color:wheat;
-                    text-align: start;
-                    
-                    font-size: 4.5rem;
-                    letter-spacing: 0em;
-                    font-style: italic;
-                    font-weight: normal;
-                    font-family: playfair display, serif;
-                    float:left;
-                }
-                #title-curse{
-                    color:wheat;
-                    text-align: start;
-                    
-                    font-size: 4.5rem;
-                    letter-spacing: 0em;
-                    margin-left:3%;
-                    font-weight: normal;
-                    font-family: playfair display, serif;
-                    float:left;
-                }
-                #dropdown-container{
-                    float:right;
-                    position: relative;
-                    width:15%;
-                    height:9vh;
-                    margin-left: auto;
-                    margin-right:2%;
-                    cursor:pointer;
-                    flex-grow: 0;
-                    filter: brightness(0) saturate(100%) invert(92%) sepia(4%) saturate(3674%) hue-rotate(326deg) brightness(104%) contrast(97%);
-                    z-index: 999;
-                }
-                    #burger-svg{
-                        height:9vh
-                    }
-                    .dropdown{
-                        display:none;   
-                        z-index: 1;
-                        position: absolute;
-                        top:15vh;
-                        width:100vw;
-                        right:0;
-                        padding-right:0%;
-                        text-align: end;
-                        
-                    }
-                    .display-dropdown{
-                        display: block;
-                        
-                    }
-                        .dropdown-item{
-                            font-size:7.5vw;
-                            padding-top:1vmax;
-                            padding-right:2%;
-                            font-weight: bold;
-                            border-bottom: 0px solid wheat;
-                            font-family: playfair display, serif;
-                            letter-spacing: 0em;
-                            font-style: italic;
-                            font-weight: 700;
-                            text-shadow: #000000da 1px -1px 10px;   
-                        }
-            #navbar{
-                display:none;
-            }
-        #main-scroll-container{
-            height:85%;
-            width:100%;   
-        }
-        #main{
-            height:100%;
-            width:100%;   
-
-    
-            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/live-b&w-landscape.jpg");
-            background-position: center top;
-            background-size: cover;
-
-            display:flex;
-            padding-top:5%;
-            align-items: center;
-            justify-content: center;
-        }
-        #construction{
-                color:rgba(245, 222, 179, 0.808);
-                font-size:4rem;
-                font-family: playfair display, serif;
-                text-align: center;
-            }
-
-}
-@media only screen and (min-width: 62rem){
-/* ? Desktop specific styling */
-
-       /* ? Base styling */
-    /* ? Mobile specific styling */
-    #index-content{
-        width:100%;
-        height:100%;
-        /* background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-        url('../imgs/live-b&w-landscape.jpg');
-        background-position: center center;
-        background-size: 100%; */
-
-        
-
-        
-    }
-    *{
-        border:0px solid red;
-    }
-        #header{
-            height:10%;
-            width:100%;
-            /* box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
-         */
-            display:flex;
-            flex-direction: row;
-            background-color: #604c5c;
-        }
-            #title{
-                height:100%;
-
-                padding-left:4%;
-
-            }
-            #title > a{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-            }
-                #title-kinoko{
-                    color:wheat;
-                    text-align: start;
-                    
-                    font-size: 3vw;
-                    letter-spacing: 0em;
-                    font-style: italic;
-                    font-weight: normal;
-                    font-family: playfair display, serif;
-                    float:left;
-                }
-                #title-curse{
-                    color:wheat;
-                    text-align: start;
-                    
-                    font-size: 3vw;
-                    letter-spacing: 0em;
-                    margin-left:3%;
-                    font-weight: normal;
-                    font-family: playfair display, serif;
-                    float:left;
-                }
-                #dropdown-container{
-                    display:none;
-                }
-
-            #navbar{
-                
-                display:flex;
-                flex-direction: row;    
-                
-                flex:1;
-                justify-content: space-evenly;
-                
-            }
-                .navbar-item{
-                    font-size: 2vw;
-                    color:wheat;
-                    font-family: playfair display, serif;
-                    
-                    text-decoration: none;
-                    flex-shrink: 0;
-                    align-self: center;
-                    
-                }
-                .navbar-item > a {
-                    text-decoration: none;
-                    color:wheat;
-                }
-
-
-        #main-scroll-container{
-            height:90%;
-            width:100%;
-        }
-
-    
-        #main{
-            height:100%;
-            width:100%;   
-
-    
-            background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/live-b&w-landscape.jpg");
-            background-position: center top;
-            background-size: cover;
-
-            display:flex;
-            padding-top:5%;
-            align-items: start;
-            justify-content: center;
-        }
-            #construction{
-                color:rgba(245, 222, 179, 0.808);
-                font-size:4rem;
-                font-family: playfair display, serif;
-            }
-        
-}
-
-
-    </style>
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
     <div id="index-content" class="content">
@@ -464,22 +45,56 @@ body{
         </div>
         <div id="main-scroll-container">
             <div id="main">
-                <div id="construction">
-                    This site is still under construction <3
+
+                <div id="picture-1">
+                    <img src="/imgs/lineup-color-vertical-02.jpg" alt="">
                 </div>
+
+                <div id="text">
+                    <div id="text-title">
+                        About us
+                    </div>
+                    <div class="text-body">
+                        As a London born 5 piece band, Kinoko Curse was formed in the chaos of university. This alt-rock band is known for their powerful live performances that entrance the audience. Their multifaceted music ties grunge undertones with ethereal Cranberries inspired vocals. Kinoko Curse have headlined Camden Assembly and supported at 02 Islington and XOYO.  
+                    </div>
+                    <div class="text-body">
+                        The band began as a 3 piece consisting of Annabella (Vocals/Bass), James (Vocals/Guitar) and Jacob (Drums). They quickly realised that the sound they were striving towards couldn't be attained with just one guitar. A month after the formation of Kinoko Curse, the band recruited Alex as an additional guitarist. The band would perform and write as a 4 piece for the best part of 7 months.
+                    </div>
+                    <div class="text-body">
+                        After multiple gigs at some of London's best underground venues, the band once again wanted to add another element to their sound. The band decided to add Sinéad (keys) to their lineup. The addition of a synth allowed the band to achieve the sound they had wanted from the very beginning.
+                    </div>
+                    <div class="text-body">
+                        Currently the band is working on recording and releasing new music. Their 1st single 'Dry' having just been released and another song soon to follow in the upcoming month.
+                    </div>
+                </div>
+
+                <div id="sidebar">
+                    <a class="sidebar-item" href="https://open.spotify.com/artist/5isQzhGnG4iWg1SKDNUiZT">
+                        <img src="../imgs/socialicons/spotify.png" alt="">
+                    </a>
+                    <a class="sidebar-item" href="https://music.apple.com/it/artist/kinoko-curse/1723972775?l=en-GB">
+                        <img src="../imgs/socialicons/applemusic.png" alt="">
+                    </a>
+                    <a class="sidebar-item" href="https://kinokocurse.bandcamp.com/">
+                        <img src="../imgs/socialicons/bandcamp.png" alt="">
+                    </a>
+                    <a class="sidebar-item" href="https://www.youtube.com/@Kinokocurse">
+                        <img src="../imgs/socialicons/youtube.png" alt="">
+                    </a>
+                    <a class="sidebar-item" href="https://www.instagram.com/kinokocurse/?hl=eng">
+                        <img src="../imgs/socialicons/instagram.png" alt="">
+                    </a>
+                    <a class="sidebar-item" href="https://www.tiktok.com/@kinokocurse">
+                        <img src="../imgs/socialicons/tiktok.png" alt="">
+                    </a>
+                    <a class="sidebar-item" href="https://linktr.ee/kinokocurse">
+                        <img src="../imgs/socialicons/linktree.png" alt="">
+                    </a>
+                </div>
+
+
             </div>
         </div>
 </body>
-<script>
-    function toggleDropdownShow(){
-    if(document.querySelector(".dropdown").classList.contains("display-dropdown")){
-        document.querySelector("#main").style.filter = "brightness(100%)"
-        document.querySelector(".dropdown").classList.toggle("display-dropdown")
-    }
-    else{
-        document.querySelector("#main").style.filter = "brightness(50%)"        
-        document.querySelector(".dropdown").classList.toggle("display-dropdown")         
-    }
-}
-</script>
+<script src="about.js"></script>
 </html>
