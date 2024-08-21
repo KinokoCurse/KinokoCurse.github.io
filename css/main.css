@@ -319,7 +319,7 @@ body{
                     color:wheat;
                     text-align: start;
                     
-                    font-size: 4.5rem;
+                    font-size: 10.5vw;
                     letter-spacing: 0em;
                     font-style: italic;
                     font-weight: normal;
@@ -330,7 +330,7 @@ body{
                     color:wheat;
                     text-align: start;
                     
-                    font-size: 4.5rem;
+                    font-size: 10.5vw;
                     letter-spacing: 0em;
                     margin-left:3%;
                     font-weight: normal;
@@ -423,7 +423,7 @@ body{
                     width:50%;
                     height: fit-content;
                     color:wheat;
-                    font-size: 8.7vw;
+                    font-size: 5.7vw;
                     letter-spacing: 0em;
                     font-weight: normal;
                     font-family: playfair display, serif;

@@ -141,6 +141,129 @@ function addEventListenersToSignin(){
 }   
 addEventListenersToSignin()
 
+
+function addNewGig(){
+    let gigNameInput = grab("name-input").value
+    let startTimeInput = grab("start-time-input").value
+    let descInput = grab("desc-input").value
+    let priceInput = grab("price-input").value
+    let venueNameInput = grab("venuename-input").value
+    let addressInput = grab("address-input").value
+    let pictureUrlInput = grab("pictureurl-input").value
+    let eventLinkInput = grab("eventlink-input").value
+
+
+    let valid = true
+    if(gigNameInput =="" ){ 
+        grab("name-input").placeholder = "Name cannot be empty"
+        valid = false 
+        console.log("name cannot be empty")
+    }
+    // if(descInput =="" ){    
+    //     grab("desc-input").placeholder = "Description cannot be empty"
+    //     valid = false 
+    // }
+    const expression = /^[0-9]+$/
+    const regexNum = new RegExp(expression)
+    if(priceInput == ""){   
+        grab("price-input").placeholder = "Price cannot be empty"
+        valid = false 
+        console.log("price cannot be empty or anything but a number")
+
+    }
+
+    else if(!priceInput.match(regexNum)){
+        grab("price-input").value = ""
+        grab("price-input").placeholder = "Price cannot contain anything but numbers"
+        valid = false 
+        console.log("price cannot be more than 10 digits")
+    }
+    priceInput = Number(priceInput)
+    if(venueNameInput == "" ){ 
+        grab("venuename-input").placeholder = "Venue name cannot be empty"
+        valid = false 
+        console.log("venue name cannot be empty")
+    }
+    if(addressInput == "" ){ 
+        grab("address-input").placeholder = "Address cannot be empty"
+        valid = false 
+        ceonsole.log("address cannot be empty")
+    }
+    console.log("valid",valid)
+    console.log("trying to add new gig")
+    console.log(userId)
+    if(valid === true){
+        console.log("trying to add new gig")
+        console.log(userId)
+        try{
+            let docRef = addDoc(collection(db, `users/${userId}/events`), {
+                datetime: new Timestamp(Math.round(new Date(startTimeInput).getTime() / 1000), 499999999),
+                description: descInput,
+                eventname: gigNameInput,
+                link: eventLinkInput,
+                pictureurl: pictureUrlInput,
+                price: priceInput,
+                venueaddress: addressInput,
+                venuename: venueNameInput
+            });
+        }
+        catch(e){
+            console.log(e)
+        }
+    }
+
+
+
+}
+
+function gigObjToGigElement(gigObj){
+    let gigElm = document.createElement("div")
+
+    let gigName = gigObj.data().eventname
+    let gigTime = new Date(gigObj.data().datetime.seconds * 1000)
+    let gigDesc = gigObj.data().description
+    let gigPrice = gigObj.data().price
+    let gigVenueName = gigObj.data().venuename
+    let gigVenueAddress = gigObj.data().venueaddress
+
+    let gigPictureUrl = gigObj.data().pictureurl
+    let gigLink = gigObj.data().link
+
+    let timeLeft = gigTime.getTime() - new Date().getTime()
+    if(timeLeft < 0){
+        timeLeft = 0
+    }
+    gigElm.dataset.timeLeft = timeLeft
+
+
+
+
+
+
+    
+    gigElement.classList.add("gig-element")
+    gigElement.innerHTML = `
+        <div class="gig-element-left">
+            <img src="${gigObj.pictureurl}" alt="gig image">
+        </div>
+        <div class="gig-element-right">
+            <h3>${gigObj.eventname}</h3>
+            <p>${gigObj.datetime.toDate()}</p>
+            <p>${gigObj.venuename}</p>
+            <p>${gigObj.venueaddress}</p>
+            <p>${gigObj.price}</p>
+            <p>${gigObj.description}</p>
+            <a href="${gigObj.link}">Link</a>
+        </div>
+    `
+    return gigElement
+}
+function addGigToFeed(gigObj){
+    
+}
+
+
+
 var userId = ""
 const auth = getAuth();
 grab("loading").style.display = "none"
@@ -161,17 +284,17 @@ onAuthStateChanged(auth, async (user) => {
             })
         })
         onSnapshot(
-            query(collection(db, `users/${userId}/todos`)), { includeMetadataChanges: true }, (snapshot) => {
+            query(collection(db, `users/${userId}/events`)), { includeMetadataChanges: true }, (snapshot) => {
                 snapshot.docChanges().forEach((change) => {
                     const source = snapshot.metadata.fromCache ? "local cache" : "server";
                     console.log("- snapshot")
                     if(change.type === "added"){
-                        addEntryToList(change.doc)      
+                        addGigToFeed(change.doc)      
                         console.log("added:",change.doc.id,change.doc.data(), "from", source) 
                     }
                     if(change.type === "modified"){
                         console.log("modified:",change.doc.data(), "from", source)
-                        removeEntry(change.doc.id)
+                        //removeEntry(change.doc.id)
                     }
                     if(change.type === "removed"){
                         
@@ -193,3 +316,9 @@ onAuthStateChanged(auth, async (user) => {
         // ? lets say someone logs in on an account at a library, how to make the logout button remove the data from lets say the cookies
     }
 })
+
+
+function addEventListeners(){
+    grab("add-button").addEventListener("click", addNewGig)
+}
+addEventListeners()

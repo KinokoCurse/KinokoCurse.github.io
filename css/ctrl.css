@@ -123,8 +123,17 @@ body{
     #new-entry-container{
         width:50%;
         height:50%;
-        
+        display:flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding-top:5%;
+        padding-left:5%;
+        justify-content: space-between;
+        font-size: 4vh;
     }
+        .input-container{
+            border:2px solid black;
+        }
         #name-input-container{}
         #name-input{}
         
@@ -152,8 +161,11 @@ body{
         #eventlink-input-container{}
             #eventlink-input{}
         
-
-
+        #action-buttons{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+        }
     #feed-container{
         width:50%;
         height:100%;
@@ -161,4 +173,41 @@ body{
         #event-feed{
             width:100%;
             height:100%;
+            display:flex;
+            flex-direction: column;
+            align-items: stretch;
+            padding-right:5%;
+            padding-left:5%;
         }
+            #example-gig{
+                border:2px solid red;
+                display:flex;
+                flex-direction: column;
+                align-items: start;
+
+            }
+            #example-gig > .title{
+                align-self: center;
+                font-size: 2.5vw;
+            }
+            #example-gig > .time{
+
+            }
+            #example-gig > .desc{
+
+            }
+            #example-gig > .venuename{
+
+            }
+            #example-gig > .venueaddress{
+
+            }
+            #example-gig > .price{
+
+            }
+            #example-gig > .picture{
+
+            }
+            #example-gig > .tickets{
+
+            }
