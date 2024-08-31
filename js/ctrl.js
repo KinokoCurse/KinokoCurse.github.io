@@ -209,7 +209,7 @@ function addNewGig(){
         }
         catch(e){
             console.log(e)
-        }
+        }8
     }
 
 
