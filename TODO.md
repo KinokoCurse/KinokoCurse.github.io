@@ -1,3 +1,8 @@
+## MAKE IPAD PAGE JUST BE MOBILE WITH PADDING!!
+
+change sizing based on images
+change background for too tall devices on desktop
+
 # restruct elements for better main bottom on desktop
 
 # add social media links to mobile
