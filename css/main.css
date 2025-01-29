@@ -661,9 +661,9 @@ body{
         
     } 
         #main{
-            background: url("../imgs/live/gigs1.jpg");
+            background: url("../imgs/live/index1.jpg");
             
-            background-position: center top;
+            background-position: center -25vh;
             background-repeat: no-repeat;
             background-size: 100vw;
             
@@ -740,8 +740,10 @@ body{
                 
                 
                 background-image: url("../imgs/live/texture.jpg");
+                
                 background-repeat: repeat-y;
                 background-size: 100vw;
+                
                 /* box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
             */
                 display:block;
@@ -806,7 +808,7 @@ body{
                 top:5vh;
                 right:2%;
                 border:0px solid red; 
-                width:8%;
+                width:6%;
 
                 flex-direction: column;
                 align-items: flex-end;
@@ -821,6 +823,7 @@ body{
                 }
                 .sidebar-item > img{
                     width:100%;
-                    filter: brightness(0) saturate(100%) invert(8%) sepia(0%) saturate(34%) hue-rotate(194deg) brightness(101%) contrast(87%);}
-
+                    filter: brightness(0) saturate(100%) invert(88%) sepia(0%) saturate(152%) hue-rotate(148deg) brightness(98%) contrast(83%);
                 }
+
+            }
