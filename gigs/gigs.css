@@ -1,3 +1,4 @@
+@font-face{font-family:"titlefont";src: url("../css/fonts/Art-nuvo.otf") format("opentype")}
 
 /* ? Universal styling*/
 
@@ -313,113 +314,254 @@ body{
 
         
     }
-    *{
-        background-color: #ac369434;
+    
+    #header{
+        height:15vh;
+        width:100vw;
+        /* box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
+     */
+        display:flex;
+        flex-direction: row;
+        background-color: #d4c68f;
     }
-        #header{
-            height:10%;
-            width:100%;
-            /* box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
-         */
-            display:flex;
-            flex-direction: row;
-            background-color: #604c5c;
+        #title{
+            height:100%;
+            padding-left:2%;
+
         }
-            #title{
-                height:100%;
+        #title > a{
+            height:100%;
+            display:flex;
+            align-items: center;
 
-                padding-left:4%;
+        }
+
+            
+            #title-kinoko{
+                color:#121212;
+                text-align: start;
+                font-size: 7vw;
+                letter-spacing: 0em;
+                font-style: italic;
+                font-weight: normal;
+                font-family: 'titlefont';
+                float:left;
+
 
             }
-            #title > a{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
+            #title-curse{
+                color:#121212;
+                text-align: start;
+                
+                font-size: 7vw;
+                letter-spacing: 0em;
+                margin-left:3%;
+                font-weight: normal;
+                font-family: 'titlefont';
+                float:left;
             }
-                #title-kinoko{
-                    color:wheat;
-                    text-align: start;
-                    
-                    font-size: 3vw;
-                    letter-spacing: 0em;
-                    font-style: italic;
-                    font-weight: normal;
-                    font-family: playfair display, serif;
-                    float:left;
-                }
-                #title-curse{
-                    color:wheat;
-                    text-align: start;
-                    
-                    font-size: 3vw;
-                    letter-spacing: 0em;
-                    margin-left:3%;
-                    font-weight: normal;
-                    font-family: playfair display, serif;
-                    float:left;
-                }
-                #dropdown-container{
-                    display:none;
-                }
+            #dropdown-container{
+                display:none;
+            }
 
-            #navbar{
+        #navbar{
+            
+            display:flex;
+            flex-direction: row;    
+            
+            flex:1;
+            justify-content: flex-end;
+            
+        }
+            .navbar-item{
+                font-size: 3vw;
+                color:#121212;
+                font-family: Helvetica;
+                letter-spacing: 0.05em;
+                font-weight: bold;
                 
-                display:flex;
-                flex-direction: row;    
-                
-                flex:1;
-                justify-content: space-evenly;
+                text-decoration: none;
+                flex-shrink: 0;
+                align-self: end;
+                padding:5%;
+                padding-bottom:2%;
+                font-family: titlefont;
                 
             }
-                .navbar-item{
-                    font-size: 2vw;
-                    color:wheat;
-                    font-family: playfair display, serif;
-                    
-                    text-decoration: none;
-                    flex-shrink: 0;
-                    align-self: center;
-                    
-                }
-                .navbar-item > a {
-                    text-decoration: none;
-                    color:wheat;
-                }
+            .navbar-item > a {
+                text-decoration: none;
+                color:#121212;
+            }
 
 
         #main-scroll-container{
-            height:90%;
-            width:100%;
+            height:85vh;
+            width:100vw;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url('../imgs/live/texture.jpg');
+            background-size: cover;
         }
         #main{
             width:100%;
             height:100%;
-            display:flex;
-            flex-direction: row;
-            justify-content: center;
+            position: relative;
+            top:0;left:0;
+            
         }
-            #info{
-                width:50%
+            #gigpic{
+                width:50vw;
+                height:50vh;
+                padding-top:6vh;
+                padding-left:6vh;
+                padding-right:3vh;
             }
-            #feed{
-                display:flex;
-                flex-direction: column;
-
-                width:50%;
-                min-height: 100%;
-                height:fit-content;
-                padding:2%;
-
-            }   
-                .nextgig{
+                #gigpic > img{
                     width:100%;
-                    height:20vh;
+                    height:100%;
+                    object-fit: cover;
                 }
-                .gig{
+            #gigs{
+                position: absolute;
+                top:0;
+                left:50vw;
+                width:50vw;
+                height:50vh;
+                
+                padding-top:6vh;
+                padding-right:6vh;
+                padding-left:3vh;
+            }
+                #gigs-title{
+                    color:#121212;
+                    font-size: 6vh;
+                    font-family: 'titlefont';
+                    text-align: start;
+                    height:6vh;
+                    color: #dfd0bb;
+                }
+                #gigs-table-scroll-container{
                     width:100%;
-                    height:10vh;
+                    height:38vh;
                 }
+                    #gig-table-title{
+                        height:9.5vh;
+
+                        padding:1vh;
+                        position: sticky;
+                    }
+                        #gig-table-title > .gig-table-date{
+                            height:100%;
+                            
+                            font-size: 4vh;
+                            font-family: 'titlefont';
+                            color:#121212;
+                            width:20%;
+                            text-align: center;
+                            background-color: #b1b1b1;
+                            float:left;
+                            display:flex;
+                            align-items: center;
+                            justify-content: center;
+                            border:2px solid #121212;
+                        }
+                        #gig-table-title > .gig-table-venue{
+                            height:100%;
+                            font-size: 4vh;
+                            font-family: 'titlefont';
+                            color:#121212;
+                            
+                            width:calc(80% - 2vh);
+                            margin-left:2vh;
+                            float:left;
+                            text-align: center;
+                            background-color: #b1b1b1;
+                            display:flex;
+                            align-items: center;
+                            justify-content: center;
+                            border:2px solid #121212;
+                        }
+
+
+
+
+                    #gig-table-items{
+                        width:calc(100% - 1vh);
+                        height:calc(9.5vh * 3);
+                        overflow-y:auto;
+                    }
+                    #gig-table-items::-webkit-scrollbar{
+
+                        width:1vh;
+                        background-color: #dedddd;
+                        
+                        
+                    }
+                    #gig-table-items::-webkit-scrollbar-thumb{
+                        background-color: #b1b1b1;
+
+                        
+                    }
+                        #gig-table-item{
+                            height:9.5vh;
+
+                            padding:1vh;
+                        }
+                            #gig-table-item > .gig-table-date{
+                                height:100%;
+                                
+                                font-size: 3vh;
+
+                                font-family: 'titlefont';
+                                color:#121212;
+                                width:20%;
+                                text-align: center;
+                                background-color: #dedddd;
+                                display:flex;
+                                float:left;
+                                align-items: center;
+                                justify-content: center;
+                                border:2px solid #121212;
+                            }
+                            #gig-table-item > .gig-table-venue{
+                                height:100%;
+                                font-size: 4vh;
+
+                                font-family: 'titlefont';
+                                overflow-x:auto;
+                                text-wrap: nowrap;
+                                color:#121212;
+                                width:calc(80% - 2vh);
+                                margin-left:2vh;
+                                padding-left:2vh;
+                                float:left;
+                                text-align: start;
+        
+                                background-color: #dedddd;
+                                display:flex;
+                                align-items: center;
+
+                                border:2px solid #121212;
+                                padding-bottom: 0px;
+
+                            }
+                            #gig-table-item > .gig-table-venue::-webkit-scrollbar{
+
+                                height:1vh;
+                                background-color: #dedddd;
+                                
+                            }
+                            #gig-table-item > .gig-table-venue::-webkit-scrollbar-thumb{
+                                background-color: #b1b1b1;
+                                width:20px;
+                                
+                            }
+
+                        
+                
+            
+
 
 
 
@@ -427,5 +569,4 @@ body{
 
         
 }
-
 

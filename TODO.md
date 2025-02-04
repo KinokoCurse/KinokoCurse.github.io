@@ -1,4 +1,5 @@
-
+# Add the black loading thing between pages
+https://christopheraue.net/design/fading-pages-on-load-and-unload 
 
 # MAKE IPAD PAGE JUST BE MOBILE WITH PADDING!!
 
