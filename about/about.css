@@ -1,4 +1,6 @@
 /* ? Universal styling*/
+/* ? Fonts */
+@font-face{font-family:"titlefont";src: url("../css/fonts/Art-nuvo.otf") format("opentype")}
 
 *{
     box-sizing: border-box;
@@ -336,95 +338,121 @@ body{
         height:100%;
         background-color: #604c5c;
         
-        
+        overflow: hidden;
 
         
     }
     *{
         border:0px solid red;
     }
-        #header{
-            height:10%;
-            width:100%;
-            /* box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
-         */
-            display:flex;
-            flex-direction: row;
-            background-color: #604c5c;
+    #header{
+        height:15vh;
+        width:100vw;
+        /* box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
+     */
+        display:flex;
+        flex-direction: row;
+        background-color: #d4c68f;
+    }
+        #title{
+            height:100%;
+            padding-left:2%;
+
         }
-            #title{
-                height:100%;
+        #title > a{
+            height:100%;
+            display:flex;
+            align-items: center;
 
-                padding-left:4%;
+        }
+
+            
+            #title-kinoko{
+                color:#121212;
+                text-align: start;
+                font-size: 7vw;
+                letter-spacing: 0em;
+                font-style: italic;
+                font-weight: normal;
+                font-family: 'titlefont';
+                float:left;
+
 
             }
-            #title > a{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
+            #title-curse{
+                color:#121212;
+                text-align: start;
+                
+                font-size: 7vw;
+                letter-spacing: 0em;
+                margin-left:3%;
+                font-weight: normal;
+                font-family: 'titlefont';
+                float:left;
             }
-                #title-kinoko{
-                    color:wheat;
-                    text-align: start;
-                    
-                    font-size: 3vw;
-                    letter-spacing: 0em;
-                    font-style: italic;
-                    font-weight: normal;
-                    font-family: playfair display, serif;
-                    float:left;
-                }
-                #title-curse{
-                    color:wheat;
-                    text-align: start;
-                    
-                    font-size: 3vw;
-                    letter-spacing: 0em;
-                    margin-left:3%;
-                    font-weight: normal;
-                    font-family: playfair display, serif;
-                    float:left;
-                }
-                #dropdown-container{
-                    display:none;
-                }
+            #dropdown-container{
+                display:none;
+            }
 
-            #navbar{
+        #navbar{
+            
+            display:flex;
+            flex-direction: row;    
+            
+            flex:1;
+            justify-content: flex-end;
+            
+        }
+            .navbar-item{
+                font-size: 3vw;
+                color:#121212;
+                font-family: Helvetica;
+                letter-spacing: 0.05em;
+                font-weight: bold;
                 
-                display:flex;
-                flex-direction: row;    
-                
-                flex:1;
-                justify-content: space-evenly;
+                text-decoration: none;
+                flex-shrink: 0;
+                align-self: end;
+                padding:5%;
+                padding-bottom:2%;
+                font-family: titlefont;
                 
             }
-                .navbar-item{
-                    font-size: 2vw;
-                    color:wheat;
-                    font-family: playfair display, serif;
-                    
-                    text-decoration: none;
-                    flex-shrink: 0;
-                    align-self: center;
-                    
-                }
-                .navbar-item > a {
-                    text-decoration: none;
-                    color:wheat;
-                }
+            .navbar-item > a {
+                text-decoration: none;
+                color:#121212;
+            }
 
 
         #main-scroll-container{
-            height:90%;
-            width:100%;
+            height:85vh;
+            width:100vw;
             background-color: #604c5c;
+            position:relative;
+            top:0;
+            left:0;
+            overflow-y: auto;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url('../imgs/live/texture.jpg');
+            background-size: cover;
         }
+        #main-scroll-container::-webkit-scrollbar{
+            width:1vmax;
+            background-color: #00000000;
+            
+        }
+        #main-scroll-container::-webkit-scrollbar-thumb{
+            background-color: #d4c68f;
+    
+            height:20px;
+            
+        } 
 
     
         #main{
             height:100%;
             width:100%;   
+
 
     
             display:flex;
@@ -443,9 +471,11 @@ body{
 
             #picture-1{
 
-                height:80%;
+                height:70vh;
                 max-width: 35%;
-                max-height:80%;
+                max-height:70vh;
+                display:flex;
+                align-items: center;
             }
                 #picture-1 > img{
                     max-width: 100%;
@@ -464,51 +494,103 @@ body{
             }
 
                 #text-title{
-                    color:wheat;
+                    color:#d4c68f;
                     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                     font-size: 8vmin;
                     letter-spacing: 0.1em;
                 }
+
                 #text > .text-body{
-                    color:wheat;
+                    color:#d4c68f;
                     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                    font-size: 2.0vmin;
+                    font-size: 1.7vmax;
                     line-height: 1.2;
                     letter-spacing: 0.05em;
                     margin-top:1vh;
                 }
-
+                #text:nth-child(2){
+                    
+                    font-size: 2.2vmin;
+                    color:green;
+                }
 
 
             
-            #sidebar{
-                display:flex;
-                position: absolute;
-                top:5vh;
-                right:4%;
-                border:0px solid red; 
-                width:8%;
+                #sidebar{
+                    display:flex;
+                    position: absolute;
+                    top:5vh;
+                    right:3%;
+                    border:0px solid red; 
+                    width:6%;
+    
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+                    .sidebar-item{
+                        width: 50%;
+                        margin-bottom:20%;
+                        filter: drop-shadow(2px 2px 5px 20px rgba(0, 0, 0, 0.925));
+                    }
+                    .sidebar-item:hover{
+                        transform: scale(1.1);
+                        transition: transform 0.5s;
+                    }
+                    .sidebar-item > img{
+                        width:100%;
+                        filter: brightness(0) saturate(100%) invert(88%) sepia(0%) saturate(152%) hue-rotate(148deg) brightness(98%) contrast(83%);
+                    }
+        #music{
+            position: relative;
 
+            height:450px;
+        }   
+            #tracks-view{
+                position:absolute;
+                top:0;
+                left:0;
+                width:35vw; 
+                height:400px;
+
+                display:flex;
                 flex-direction: column;
-                align-items: flex-end;
+                justify-content: space-evenly;
             }
-                .sidebar-item{
-                    width: 50%;
-                    margin-bottom:3%;
-                }
-                .sidebar-item:hover{
-                    transform: scale(1.1);
-                    transition: transform 0.5s;
-                }
-                .sidebar-item > img{
-                    
-                    width:100%;
-                    filter: brightness(0) saturate(100%) invert(87%) sepia(16%) saturate(768%) hue-rotate(333deg) brightness(105%) contrast(95%)
-                    drop-shadow(12px 12px 12px #38133877);
-                } 
-                .sidebar-item:nth-child(even){
-                    align-self: flex-start;
-                }
+            #tracks-view > .tracks{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #tracks-view > .tracks > iframe{
+
+                height:90px;
+                width:30vw;
+            }
+
+                
+
+            #videos-view{
+                position:absolute;
+                top:0;
+                left:40vw;
+                width:57vw; 
+                height:400px;
+
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            #videos-view > .videos{
+                width:28vw;
+                max-width: 28vw;
+                height:100%;
+                padding:1vw;
+            }
+            #videos-view > .videos > iframe{
+                height:100%;
+                width:100%;
+            }
         
 }
 

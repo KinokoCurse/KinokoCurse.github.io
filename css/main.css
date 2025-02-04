@@ -546,8 +546,6 @@ body{
 @media only screen and (min-width: 62rem){
 /* ? Desktop specific styling */
 
-       /* ? Base styling */
-    /* ? Mobile specific styling */
     #index-content{
         width:100%;
         height:100%;
@@ -559,18 +557,13 @@ body{
         
         background-color: #121212;
         
-
-        background: url("../imgs/live/texture.jpg");
-        background-position: center 10vh;
-        background-size: 100vw;
-        
     }
     *{
         border:0px solid red;
     }
         #header{
-            height:15%;
-            width:100%;
+            height:15vh;
+            width:100vw;
             /* box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
          */
             display:flex;
@@ -623,7 +616,7 @@ body{
                 .navbar-item{
                     font-size: 3vw;
                     color:#121212;
-                    font-family: Helvetica;
+                    font-family: titlefont;
                     letter-spacing: 0.05em;
                     font-weight: bold;
                     
@@ -641,9 +634,10 @@ body{
 
 
         #main-scroll-container{
-            height:85%;
+            height:85vh;  /* -15 for height of header */
             width:100%;
             overflow-y:overlay;
+            overflow-x: hidden;
             border:0px solid red;
 
 
@@ -655,30 +649,32 @@ body{
         
     }
     #main-scroll-container::-webkit-scrollbar-thumb{
-        background-color: #121212;
-        box-shadow: 0px 0px 30px #000000;
+        background-color: #d4c68f;
+
         height:20px;
         
     } 
         #main{
-            background: url("../imgs/live/index1.jpg");
-            
-            background-position: center -25vh;
+
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url('../imgs/live/index1.jpg');
+
+
+            background-position: center center;
             background-repeat: no-repeat;
             background-size: 100vw;
-            
-
-
-
+            background-size: cover;
             padding-top:3%;
-            height:135vh;
+            height:85vh;
             width:100%;   
-
             display:flex;
             flex-direction: column;
             padding-left:3%;
             position: relative;
+            top:0;
+            left:0;
             overflow:hidden ;
+            box-shadow: rgba(0, 0, 0, 0.726) 0px -6px 18px 12px inset;
         }
         
             #listen-to{        
@@ -733,75 +729,6 @@ body{
                         color:#dfd0bb;
 
                     } 
-
-            #reviews-scroll-container{
-                width:100vw;
-                
-                
-                
-                background-image: url("../imgs/live/texture.jpg");
-                
-                background-repeat: repeat-y;
-                background-size: 100vw;
-                
-                /* box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
-            */
-                display:block;
-                position: absolute;
-                bottom:0%;
-                height:50vh;
-                left:0;
-                border:0px solid red;
-                overflow:visible;
-
-                z-index: 998;
-            } 
-                #reviews{
-                    width:100vw;
-                    height:100%;
-                    
-                    color:#cccccc;
-                    letter-spacing: 0.1em;
-                    font-weight: normal;
-                    font-family: playfair display, serif;
-
-
-                    display: flex;
-                    flex-direction: row-reverse;
-                    
-                    justify-content: flex-end;
-                    
-                    column-gap: 5%;
-                }
-                    .review{
-                        width:40vw;
-                        display: flex;
-                        flex-direction: column;
-                        height:100%;
-                        
-                        padding: 3% 0% 3% 4%;
-                    }   
-                    /* #review-1{}
-                    #review-2{} */
-
-                        .review-text{
-                            width: 100%;
-                            font-size: 3.1vmin;
-                            font-family: Arial, Helvetica, sans-serif;
-                            text-shadow: #242424 1px 1px 5px;
-                        }
-                        .review-author{
-                            margin-top:2%;
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-weight: bolder;
-                            font-size: 3.8vmin;
-                            padding-top:4%;
-                            margin-top:auto;
-                            text-shadow: #242424 1px 1px 5px;
-                        }
-
-
-
             #sidebar{
                 display:flex;
                 position: absolute;
@@ -816,6 +743,7 @@ body{
                 .sidebar-item{
                     width: 50%;
                     margin-bottom:20%;
+                    filter: drop-shadow(2px 2px 5px 20px rgba(0, 0, 0, 0.925));
                 }
                 .sidebar-item:hover{
                     transform: scale(1.1);
@@ -825,5 +753,89 @@ body{
                     width:100%;
                     filter: brightness(0) saturate(100%) invert(88%) sepia(0%) saturate(152%) hue-rotate(148deg) brightness(98%) contrast(83%);
                 }
+
+
+        #reviews-scroll-container{
+            width:100vw;
+            height:fit-content;
+            position:relative;
+            top:0vh;
+            
+            
+            
+            background-image: url("../imgs/live/texture.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100vw;
+            background-size: cover;
+            box-shadow: -1vmax 8px 10px 10px #0000009f inset;
+            
+            /* box-shadow: rgba(14, 30, 37, 0.32) 0px 4px 8px 0px, rgba(14, 30, 37, 0.62) 0px 4px 32px 0px; 
+        */
+            /* display:block;
+            position: absolute;
+            bottom:0%;
+            height:50vh;
+            left:0;
+            border:0px solid red;
+            overflow:hidden; */
+
+            z-index: 998;
+        } 
+            #reviews{
+                width:100vw;
+                height:100%;
+                
+                color:#cccccc;
+                letter-spacing: 0.1em;
+                font-weight: normal;
+                font-family: playfair display, serif;
+
+
+                display: flex;
+                flex-direction: row-reverse;
+                
+                justify-content: flex-end;
+                
+                column-gap: 5%;
+            }
+                .review{
+                    width:40vw;
+                    display: flex;
+                    flex-direction: column;
+                    height:100%;
+                    
+                    padding: 3% 0% 3% 4%;
+                }   
+                /* #review-1{}
+                #review-2{} */
+
+                    .review-text{
+                        width: 100%;
+                        font-size: 2.8vmin;
+                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                        text-shadow: #242424 1px 1px 5px;
+                        line-height: 1.2;
+                        letter-spacing: 0.05em;
+                        word-spacing: 0.19em;
+                        font-weight: 300;
+                    }
+                    .review-author{
+                        margin-top:2%;
+                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                        font-weight: bolder;
+                        font-size: 3.2vmin;
+                        padding-top:4%;
+                        margin-top:auto;
+                        text-shadow: #1a1a1a 4px 4px 5px;
+                        line-height: 1.2;
+                        letter-spacing: 0.05em;
+                        font-weight: 300;
+                        
+                    }
+
+
+
+
 
             }
