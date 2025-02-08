@@ -106,19 +106,72 @@
                     <div id="shows-title">
                         SHOWS
                     </div>
-                    <div id="shows-scroll-container">
-                        <div id="shows">
-                            <div class="show">
 
-                            </div>
+                    <div id="shows-container">
+                        <div class="show fade">
+                            <img src="../imgs/live-b&w-landscape.jpg" alt="">
                         </div>
+
+
+                        <div class="show fade">
+                            <img src="../imgs/live-color-landscape-01.jpg" alt="">
+                        </div>
+
+
+                        <div class="show fade">
+                            <img src="../imgs/live-color-landscape-02.jpg" alt="">
+                        </div>
+
+
+                        <div class="show fade">
+                            <img src="../imgs/live-color-landscape-03.jpg" alt="">
+                        </div>
+
+
+                        <a id="clickprev" onclick="moveSlides(-1)">&#10094;</a>
+                        <a id="clicknext" onclick="moveSlides(1)">&#10095;</a>
+                        
                     </div>
                 </div>
-
             </div>
         </div>
-</body>
+
 <script>
+    console.log("trst")
+
+
+
+    let slideIndex = 1;
+    console.log(slideIndex)
+
+    showSlides(slideIndex);
+    
+    function moveSlides(n){
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n){
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n){
+        let i;
+        let slides = document.getElementsByClassName("show");
+        console.log(slides)
+        if(n > slides.length){
+            slideIndex = 1;
+        }
+        if(n < 1){
+            slideindex = slides.length;
+        }
+        for(i = 0; i < slides.length; i++){
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+
+
+
     function toggleDropdownShow(){
     if(document.querySelector(".dropdown").classList.contains("display-dropdown")){
         document.querySelector("#main").style.filter = "brightness(100%)"
@@ -127,8 +180,10 @@
     else{
         document.querySelector("#main").style.filter = "brightness(50%)"        
         document.querySelector(".dropdown").classList.toggle("display-dropdown")         
-    }
-}
-</script>
+    }}
+
+</script>        
+</body>
+
 <script src="gigs.js"></script>
 </html>

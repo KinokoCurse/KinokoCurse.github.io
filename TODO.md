@@ -1,6 +1,9 @@
 # Add the black loading thing between pages
 https://christopheraue.net/design/fading-pages-on-load-and-unload 
 
+# add buttons that auto scroll down 
+# lots of styling and shading
+
 # MAKE IPAD PAGE JUST BE MOBILE WITH PADDING!!
 
 change sizing based on images
